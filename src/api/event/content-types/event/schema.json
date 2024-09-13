@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "events",
+  "info": {
+    "singularName": "event",
+    "pluralName": "events",
+    "displayName": "Event"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "EventName": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "EventDescription": {
+      "type": "text"
+    },
+    "FirstPrize": {
+      "type": "biginteger",
+      "default": "0"
+    },
+    "SecondPrize": {
+      "type": "biginteger",
+      "default": "0"
+    },
+    "ThirdPrize": {
+      "type": "biginteger",
+      "default": "0"
+    },
+    "RulebookLink": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "EventPriority": {
+      "type": "biginteger",
+      "default": "1000"
+    }
+  }
+}
