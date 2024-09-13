@@ -368,6 +368,7 @@ export interface ApiEventEvent extends Schema.CollectionType {
     singularName: 'event';
     pluralName: 'events';
     displayName: 'Event';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -378,8 +379,14 @@ export interface ApiEventEvent extends Schema.CollectionType {
     FirstPrize: Attribute.BigInteger & Attribute.DefaultTo<'0'>;
     SecondPrize: Attribute.BigInteger & Attribute.DefaultTo<'0'>;
     ThirdPrize: Attribute.BigInteger & Attribute.DefaultTo<'0'>;
-    RulebookLink: Attribute.String & Attribute.Required & Attribute.Unique;
+    RulebookLink: Attribute.String &
+      Attribute.Required &
+      Attribute.Unique &
+      Attribute.DefaultTo<'none'>;
     EventPriority: Attribute.BigInteger & Attribute.DefaultTo<'1000'>;
+    EventDate: Attribute.Date &
+      Attribute.Required &
+      Attribute.DefaultTo<'2024-10-04'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

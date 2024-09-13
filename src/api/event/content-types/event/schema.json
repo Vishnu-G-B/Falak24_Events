@@ -4,7 +4,8 @@
   "info": {
     "singularName": "event",
     "pluralName": "events",
-    "displayName": "Event"
+    "displayName": "Event",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -34,11 +35,17 @@
     "RulebookLink": {
       "type": "string",
       "required": true,
-      "unique": true
+      "unique": true,
+      "default": "none"
     },
     "EventPriority": {
       "type": "biginteger",
       "default": "1000"
+    },
+    "EventDate": {
+      "type": "date",
+      "default": "2024-10-04",
+      "required": true
     }
   }
 }
