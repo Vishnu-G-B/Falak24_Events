@@ -381,7 +381,6 @@ export interface ApiEventEvent extends Schema.CollectionType {
     ThirdPrize: Attribute.BigInteger & Attribute.DefaultTo<'0'>;
     RulebookLink: Attribute.String &
       Attribute.Required &
-      Attribute.Unique &
       Attribute.DefaultTo<'none'>;
     EventPriority: Attribute.BigInteger & Attribute.DefaultTo<'1000'>;
     EventDate: Attribute.Date &

@@ -35,7 +35,7 @@
     "RulebookLink": {
       "type": "string",
       "required": true,
-      "unique": true,
+      "unique": false,
       "default": "none"
     },
     "EventPriority": {
