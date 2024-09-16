@@ -375,7 +375,7 @@ export interface ApiEventEvent extends Schema.CollectionType {
   };
   attributes: {
     EventName: Attribute.String & Attribute.Required & Attribute.Unique;
-    EventDescription: Attribute.Text;
+    EventDescription: Attribute.Text & Attribute.Required;
     FirstPrize: Attribute.BigInteger & Attribute.DefaultTo<'0'>;
     SecondPrize: Attribute.BigInteger & Attribute.DefaultTo<'0'>;
     ThirdPrize: Attribute.BigInteger & Attribute.DefaultTo<'0'>;

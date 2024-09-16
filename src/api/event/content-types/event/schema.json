@@ -18,7 +18,8 @@
       "unique": true
     },
     "EventDescription": {
-      "type": "text"
+      "type": "text",
+      "required": true
     },
     "FirstPrize": {
       "type": "biginteger",
