@@ -380,9 +380,6 @@ export interface ApiEventEvent extends Schema.CollectionType {
       Attribute.SetMinMaxLength<{
         maxLength: 250;
       }>;
-    FirstPrize: Attribute.BigInteger & Attribute.DefaultTo<'0'>;
-    SecondPrize: Attribute.BigInteger & Attribute.DefaultTo<'0'>;
-    ThirdPrize: Attribute.BigInteger & Attribute.DefaultTo<'0'>;
     RulebookLink: Attribute.String &
       Attribute.Required &
       Attribute.DefaultTo<'none'>;
@@ -395,6 +392,9 @@ export interface ApiEventEvent extends Schema.CollectionType {
       Attribute.SetMinMaxLength<{
         maxLength: 60;
       }>;
+    PrizePool: Attribute.BigInteger &
+      Attribute.Required &
+      Attribute.DefaultTo<'0'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
