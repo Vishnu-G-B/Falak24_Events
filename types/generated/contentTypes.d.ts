@@ -375,7 +375,11 @@ export interface ApiEventEvent extends Schema.CollectionType {
   };
   attributes: {
     EventName: Attribute.String & Attribute.Required & Attribute.Unique;
-    EventDescription: Attribute.Text & Attribute.Required;
+    EventDescription: Attribute.Text &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 250;
+      }>;
     FirstPrize: Attribute.BigInteger & Attribute.DefaultTo<'0'>;
     SecondPrize: Attribute.BigInteger & Attribute.DefaultTo<'0'>;
     ThirdPrize: Attribute.BigInteger & Attribute.DefaultTo<'0'>;
@@ -386,6 +390,11 @@ export interface ApiEventEvent extends Schema.CollectionType {
     EventDate: Attribute.Date &
       Attribute.Required &
       Attribute.DefaultTo<'2024-10-04'>;
+    EventTagline: Attribute.String &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 60;
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

@@ -19,7 +19,8 @@
     },
     "EventDescription": {
       "type": "text",
-      "required": true
+      "required": true,
+      "maxLength": 250
     },
     "FirstPrize": {
       "type": "biginteger",
@@ -47,6 +48,12 @@
       "type": "date",
       "default": "2024-10-04",
       "required": true
+    },
+    "EventTagline": {
+      "type": "string",
+      "required": true,
+      "unique": false,
+      "maxLength": 60
     }
   }
 }
