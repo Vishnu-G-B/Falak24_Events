@@ -47,6 +47,30 @@
       "type": "biginteger",
       "required": true,
       "default": "0"
+    },
+    "isTeamEvent": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "maxTeamMembers": {
+      "type": "integer",
+      "required": true,
+      "default": 1
+    },
+    "maxTeams": {
+      "type": "integer",
+      "required": false
+    },
+    "passRequiredNM": {
+      "type": "string"
+    },
+    "passRequiredM": {
+      "type": "string"
+    },
+    "isClosed": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

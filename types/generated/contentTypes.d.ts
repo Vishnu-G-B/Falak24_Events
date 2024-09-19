@@ -395,6 +395,16 @@ export interface ApiEventEvent extends Schema.CollectionType {
     PrizePool: Attribute.BigInteger &
       Attribute.Required &
       Attribute.DefaultTo<'0'>;
+    isTeamEvent: Attribute.Boolean &
+      Attribute.Required &
+      Attribute.DefaultTo<false>;
+    maxTeamMembers: Attribute.Integer &
+      Attribute.Required &
+      Attribute.DefaultTo<1>;
+    maxTeams: Attribute.Integer;
+    passRequiredNM: Attribute.String;
+    passRequiredM: Attribute.String;
+    isClosed: Attribute.Boolean & Attribute.DefaultTo<false>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
